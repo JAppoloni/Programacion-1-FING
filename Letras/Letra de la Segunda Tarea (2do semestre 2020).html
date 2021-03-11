@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xml:lang="es" class="yui3-js-enabled">
+
+<head>
+    <title>P1: Letra de la Segunda Tarea (2do semestre 2020)</title>
+    <link rel="shortcut icon" href="https://eva.fing.edu.uy/theme/image.php/bcu/theme/1604512169/favicon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="moodle, P1: Letra de la Segunda Tarea (2do semestre 2020)">
+    <link rel="stylesheet" type="text/css"
+        href="https://eva.fing.edu.uy/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css">
+    <script type="text/javascript" async="" defer="" src="//www.fing.edu.uy/piwik/piwik.js"></script>
+    <script charset="utf-8" id="yui_3_17_2_1_1615472487851_8"
+        src="https://eva.fing.edu.uy/theme/yui_combo.php?m/1588808938/core/dock/dock-loader-min.js" async=""></script>
+    <script id="firstthemesheet"
+        type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css" href="https://eva.fing.edu.uy/theme/styles.php/bcu/1604512169_1/all">
+    <script type="text/javascript">
+        //<![CDATA[
+        var M = {}; M.yui = {};
+        M.pageloadstarttime = new Date();
+        M.cfg = { "wwwroot": "https:\/\/eva.fing.edu.uy", "sesskey": "pgBZhbCwhX", "themerev": "1604512169", "slasharguments": 1, "theme": "bcu", "iconsystemmodule": "core\/icon_system_standard", "jsrev": "1588808938", "admin": "admin", "svgicons": true, "usertimezone": "Am\u00e9rica\/Montevideo", "contextid": 311419 }; var yui1ConfigFn = function (me) { if (/-skin|reset|fonts|grids|base/.test(me.name)) { me.type = 'css'; me.path = me.path.replace(/\.js/, '.css'); me.path = me.path.replace(/\/yui2-skin/, '/assets/skins/sam/yui2-skin') } };
+        var yui2ConfigFn = function (me) {
+            var parts = me.name.replace(/^moodle-/, '').split('-'), component = parts.shift(), module = parts[0], min = '-min'; if (/-(skin|core)$/.test(me.name)) { parts.pop(); me.type = 'css'; min = '' }
+            if (module) { var filename = parts.join('-'); me.path = component + '/' + module + '/' + filename + min + '.' + me.type } else { me.path = component + '/' + component + '.' + me.type }
+        };
+        YUI_config = { "debug": false, "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/3.17.2\/", "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "combine": true, "filter": null, "insertBefore": "firstthemesheet", "groups": { "yui2": { "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/2in3\/2.9.0\/build\/", "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "combine": true, "ext": false, "root": "2in3\/2.9.0\/build\/", "patterns": { "yui2-": { "group": "yui2", "configFn": yui1ConfigFn } } }, "moodle": { "name": "moodle", "base": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?m\/1588808938\/", "combine": true, "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "ext": false, "root": "m\/1588808938\/", "patterns": { "moodle-": { "group": "moodle", "configFn": yui2ConfigFn } }, "filter": null, "modules": { "moodle-core-handlebars": { "condition": { "trigger": "handlebars", "when": "after" } }, "moodle-core-tooltip": { "requires": ["base", "node", "io-base", "moodle-core-notification-dialogue", "json-parse", "widget-position", "widget-position-align", "event-outside", "cache-base"] }, "moodle-core-maintenancemodetimer": { "requires": ["base", "node"] }, "moodle-core-chooserdialogue": { "requires": ["base", "panel", "moodle-core-notification"] }, "moodle-core-blocks": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification"] }, "moodle-core-dock": { "requires": ["base", "node", "event-custom", "event-mouseenter", "event-resize", "escape", "moodle-core-dock-loader", "moodle-core-event"] }, "moodle-core-dock-loader": { "requires": ["escape"] }, "moodle-core-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "event-key", "event-focus", "moodle-core-notification"] }, "moodle-core-languninstallconfirm": { "requires": ["base", "node", "moodle-core-notification-confirm", "moodle-core-notification-alert"] }, "moodle-core-notification": { "requires": ["moodle-core-notification-dialogue", "moodle-core-notification-alert", "moodle-core-notification-confirm", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-core-notification-dialogue": { "requires": ["base", "node", "panel", "escape", "event-key", "dd-plugin", "moodle-core-widget-focusafterclose", "moodle-core-lockscroll"] }, "moodle-core-notification-alert": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-confirm": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-exception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-ajaxexception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-actionmenu": { "requires": ["base", "event", "node-event-simulate"] }, "moodle-core-checknet": { "requires": ["base-base", "moodle-core-notification-alert", "io-base"] }, "moodle-core-lockscroll": { "requires": ["plugin", "base-build"] }, "moodle-core-popuphelp": { "requires": ["moodle-core-tooltip"] }, "moodle-core-formchangechecker": { "requires": ["base", "event-focus", "moodle-core-event"] }, "moodle-core-event": { "requires": ["event-custom"] }, "moodle-core_availability-form": { "requires": ["base", "node", "event", "event-delegate", "panel", "moodle-core-notification-dialogue", "json"] }, "moodle-backup-backupselectall": { "requires": ["node", "event", "node-event-simulate", "anim"] }, "moodle-backup-confirmcancel": { "requires": ["node", "node-event-simulate", "moodle-core-notification-confirm"] }, "moodle-course-formatchooser": { "requires": ["base", "node", "node-event-simulate"] }, "moodle-course-management": { "requires": ["base", "node", "io-base", "moodle-core-notification-exception", "json-parse", "dd-constrain", "dd-proxy", "dd-drop", "dd-delegate", "node-event-delegate"] }, "moodle-course-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-course-coursebase", "moodle-course-util"] }, "moodle-course-modchooser": { "requires": ["moodle-core-chooserdialogue", "moodle-course-coursebase"] }, "moodle-course-util": { "requires": ["node"], "use": ["moodle-course-util-base"], "submodules": { "moodle-course-util-base": {}, "moodle-course-util-section": { "requires": ["node", "moodle-course-util-base"] }, "moodle-course-util-cm": { "requires": ["node", "moodle-course-util-base"] } } }, "moodle-course-categoryexpander": { "requires": ["node", "event-key"] }, "moodle-form-dateselector": { "requires": ["base", "node", "overlay", "calendar"] }, "moodle-form-showadvanced": { "requires": ["node", "base", "selector-css3"] }, "moodle-form-passwordunmask": { "requires": [] }, "moodle-form-shortforms": { "requires": ["node", "base", "selector-css3", "moodle-core-event"] }, "moodle-question-chooser": { "requires": ["moodle-core-chooserdialogue"] }, "moodle-question-searchform": { "requires": ["base", "node"] }, "moodle-question-preview": { "requires": ["base", "dom", "event-delegate", "event-key", "core_question_engine"] }, "moodle-question-qbankmanager": { "requires": ["node", "selector-css3"] }, "moodle-availability_completion-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_date-form": { "requires": ["base", "node", "event", "io", "moodle-core_availability-form"] }, "moodle-availability_grade-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_group-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_grouping-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_profile-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-mod_assign-history": { "requires": ["node", "transition"] }, "moodle-mod_attendance-groupfilter": { "requires": ["base", "node"] }, "moodle-mod_forum-subscriptiontoggle": { "requires": ["base-base", "io-base"] }, "moodle-mod_quiz-modform": { "requires": ["base", "node", "event"] }, "moodle-mod_quiz-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-base", "moodle-mod_quiz-util-page", "moodle-mod_quiz-util-slot", "moodle-course-util"] }, "moodle-mod_quiz-questionchooser": { "requires": ["moodle-core-chooserdialogue", "moodle-mod_quiz-util", "querystring-parse"] }, "moodle-mod_quiz-repaginate": { "requires": ["base", "event", "node", "io", "moodle-core-notification-dialogue"] }, "moodle-mod_quiz-autosave": { "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"] }, "moodle-mod_quiz-util": { "requires": ["node", "moodle-core-actionmenu"], "use": ["moodle-mod_quiz-util-base"], "submodules": { "moodle-mod_quiz-util-base": {}, "moodle-mod_quiz-util-slot": { "requires": ["node", "moodle-mod_quiz-util-base"] }, "moodle-mod_quiz-util-page": { "requires": ["node", "moodle-mod_quiz-util-base"] } } }, "moodle-mod_quiz-toolboxes": { "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-slot", "moodle-core-notification-ajaxexception"] }, "moodle-mod_quiz-quizbase": { "requires": ["base", "node"] }, "moodle-mod_scheduler-saveseen": { "requires": ["base", "node", "event"] }, "moodle-mod_scheduler-studentlist": { "requires": ["base", "node", "event", "io"] }, "moodle-mod_scheduler-delselected": { "requires": ["base", "node", "event"] }, "moodle-message_airnotifier-toolboxes": { "requires": ["base", "node", "io"] }, "moodle-filter_glossary-autolinker": { "requires": ["base", "node", "io-base", "json-parse", "event-delegate", "overlay", "moodle-core-event", "moodle-core-notification-alert", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-filter_mathjaxloader-loader": { "requires": ["moodle-core-event"] }, "moodle-editor_atto-editor": { "requires": ["node", "transition", "io", "overlay", "escape", "event", "event-simulate", "event-custom", "node-event-html5", "node-event-simulate", "yui-throttle", "moodle-core-notification-dialogue", "moodle-core-notification-confirm", "moodle-editor_atto-rangy", "handlebars", "timers", "querystring-stringify"] }, "moodle-editor_atto-plugin": { "requires": ["node", "base", "escape", "event", "event-outside", "handlebars", "event-custom", "timers", "moodle-editor_atto-menu"] }, "moodle-editor_atto-menu": { "requires": ["moodle-core-notification-dialogue", "node", "event", "event-custom"] }, "moodle-editor_atto-rangy": { "requires": [] }, "moodle-format_grid-gridkeys": { "requires": ["event-nav-keys"] }, "moodle-report_eventlist-eventfilter": { "requires": ["base", "event", "node", "node-event-delegate", "datatable", "autocomplete", "autocomplete-filters"] }, "moodle-report_loglive-fetchlogs": { "requires": ["base", "event", "node", "io", "node-event-delegate"] }, "moodle-gradereport_grader-gradereporttable": { "requires": ["base", "node", "event", "handlebars", "overlay", "event-hover"] }, "moodle-gradereport_history-userselector": { "requires": ["escape", "event-delegate", "event-key", "handlebars", "io-base", "json-parse", "moodle-core-notification-dialogue"] }, "moodle-tool_capability-search": { "requires": ["base", "node"] }, "moodle-tool_lp-dragdrop-reorder": { "requires": ["moodle-core-dragdrop"] }, "moodle-tool_monitor-dropdown": { "requires": ["base", "event", "node"] }, "moodle-assignfeedback_editpdf-editor": { "requires": ["base", "event", "node", "io", "graphics", "json", "event-move", "event-resize", "transition", "querystring-stringify-simple", "moodle-core-notification-dialog", "moodle-core-notification-alert", "moodle-core-notification-warning", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-atto_accessibilitychecker-button": { "requires": ["color-base", "moodle-editor_atto-plugin"] }, "moodle-atto_accessibilityhelper-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_align-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_bold-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_charmap-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_clear-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_collapse-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_emoticon-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_equation-button": { "requires": ["moodle-editor_atto-plugin", "moodle-core-event", "io", "event-valuechange", "tabview", "array-extras"] }, "moodle-atto_html-codemirror": { "requires": ["moodle-atto_html-codemirror-skin"] }, "moodle-atto_html-beautify": {}, "moodle-atto_html-button": { "requires": ["promise", "moodle-editor_atto-plugin", "moodle-atto_html-beautify", "moodle-atto_html-codemirror", "event-valuechange"] }, "moodle-atto_htmlplus-codemirror": { "requires": ["moodle-atto_htmlplus-codemirror-skin"] }, "moodle-atto_htmlplus-beautify": {}, "moodle-atto_htmlplus-button": { "requires": ["moodle-editor_atto-plugin", "moodle-atto_htmlplus-beautify", "moodle-atto_htmlplus-codemirror", "event-valuechange"] }, "moodle-atto_image-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_indent-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_italic-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_link-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_managefiles-usedfiles": { "requires": ["node", "escape"] }, "moodle-atto_managefiles-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_media-button": { "requires": ["moodle-editor_atto-plugin", "moodle-form-shortforms"] }, "moodle-atto_noautolink-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_orderedlist-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_recordrtc-recording": { "requires": ["moodle-atto_recordrtc-button"] }, "moodle-atto_recordrtc-button": { "requires": ["moodle-editor_atto-plugin", "moodle-atto_recordrtc-recording"] }, "moodle-atto_rtl-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_strike-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_subscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_superscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_table-button": { "requires": ["moodle-editor_atto-plugin", "moodle-editor_atto-menu", "event", "event-valuechange"] }, "moodle-atto_title-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_underline-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_undo-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_unorderedlist-button": { "requires": ["moodle-editor_atto-plugin"] } } }, "gallery": { "name": "gallery", "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/gallery\/", "combine": true, "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "ext": false, "root": "gallery\/1588808938\/", "patterns": { "gallery-": { "group": "gallery" } } } }, "modules": { "core_filepicker": { "name": "core_filepicker", "fullpath": "https:\/\/eva.fing.edu.uy\/lib\/javascript.php\/1588808938\/repository\/filepicker.js", "requires": ["base", "node", "node-event-simulate", "json", "async-queue", "io-base", "io-upload-iframe", "io-form", "yui2-treeview", "panel", "cookie", "datatable", "datatable-sort", "resize-plugin", "dd-plugin", "escape", "moodle-core_filepicker", "moodle-core-notification-dialogue"] }, "core_comment": { "name": "core_comment", "fullpath": "https:\/\/eva.fing.edu.uy\/lib\/javascript.php\/1588808938\/comment\/comment.js", "requires": ["base", "io-base", "node", "json", "yui2-animation", "overlay", "escape"] }, "mathjax": { "name": "mathjax", "fullpath": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured" } } };
+        M.yui.loader = { modules: {} };
+
+//]]>
+    </script>
+
+    <!-- Start Piwik Code -->
+    <noscript>
+        <p>
+            <img src="https://www.fing.edu.uy/piwik/piwik.php?idsite=5" style="border:0;" alt="" />
+        </p>
+    </noscript>
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['setDocumentTitle', 'Institutos/Computación/Programación 1/page/Letra de la Segunda Tarea (2do semestre 2020)']);
+
+        _paq.push(['setUserId', 1]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['enableHeartBeatTimer', 30]);
+        (function () {
+            var u = '//www.fing.edu.uy/piwik/';
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 5]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first"
+        src="https://eva.fing.edu.uy/lib/requirejs.php/1588808938/core/first.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery"
+        src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/jquery-3.2.1.min.js"></script>
+</head>
+
+<body id="page-mod-page-view"
+    class="format-topics  path-mod path-mod-page dir-ltr lang-es yui-skin-sam yui3-skin-sam eva-fing-edu-uy pagelayout-incourse course-58 context-311419 cmid-119194 category-7 two-column  has-region-side-post used-region-side-post side-post-only jsenabled">
+
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script>
+    <div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+    <script type="text/javascript" src="https://eva.fing.edu.uy/theme/jquery.php/core/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/jquery-flexslider-min.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/jquery-easing-min.js"></script>
+    <script type="text/javascript" src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/custom2.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/javascript-static.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        document.body.className += ' jsenabled';
+//]]>
+    </script>
+
+    <div id="page" class="container-fluid ">
+
+
+
+
+        <div class="container outercont">
+            <div id="page-content" class="row-fluid">
+
+                <section id="region-main" class="span9   ">
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span>
+                        <h2>Letra de la Segunda Tarea (2do semestre 2020)</h2>
+                        <div class="box generalbox center clearfix">
+                            <div class="no-overflow"><br>
+                                <p></p>
+                                <h1>Laboratorio 2020 de Programación 1. Tarea 2<br></h1>
+
+                                <h2>Información general</h2>
+
+                                <p>Se sugiere leer con mucha atención todo el texto antes de comenzar la tarea. Es muy
+                                    importante que se respeten todos los requisitos solicitados en esta sección y las
+                                    siguientes. Si surgen dudas, pedimos que las formulen en el foro correspondiente a
+                                    la
+                                    tarea.
+                                </p>
+
+                                <h3>Individualidad</h3>
+
+                                <p>Esta tarea se deberá realizar en forma individual. Para todas las tareas rige el <a
+                                        href="https://eva.fing.edu.uy/mod/page/view.php?id=59686">Reglamento del
+                                        Instituto de Computación ante Instancias
+                                        de No Individualidad en los
+                                        Laboratorios</a> (lectura obligatoria).</p>
+
+                                <h3>Calendario</h3>
+
+                                <p><strong>Entrega:</strong> La tarea debe entregarse en el periodo que va del
+                                    <b>23/11</b>&nbsp; al <b>25/11</b>. Se aceptan entregas <strong>hasta el 25/11 a la
+                                        hora 14:00</strong>. Los trabajos deberán ser entregados dentro de los plazos
+                                    establecidos.
+                                    No se aceptarán trabajos fuera de plazo.
+                                    <br>
+                                </p>
+
+                                <p><strong>Re-Entrega:</strong> Todos los estudiantes que realizaron la entrega pueden
+                                    corregir los errores y realizar una segunda entrega (<em>re-entrega</em>). La
+                                    re-entrega se realizará en el período que va del <b>26/11</b> al <b>27/11</b>. Se
+                                    aceptan
+                                    re-entregas hasta el
+                                    <b>27/11</b> <b>a la hora 14:00</b>.
+                                </p>
+
+                                <h3>Forma de entrega</h3>
+
+                                <p>Se debe entregar un <strong>único</strong> archivo de nombre
+                                    <strong>tarea2.pas</strong> que debe contener <i><b>únicamente</b></i> el código de
+                                    los subprogramas pedidos y eventualmente el de subprogramas auxiliares que se
+                                    necesiten para implementarlos.
+                                    Las constantes y tipos de datos son provistos por los docentes en el archivo
+                                    <b>principal2.pas</b>. Para usar este programa se debe estudiar el documento <a
+                                        onclick="" href="https://eva.fing.edu.uy/mod/page/view.php?id=119193">Cómo
+                                        ejecutar los casos de prueba de la Segunda Tarea (2do semestre 2020)</a>.<br>
+                                </p>
+
+                                <h2>Introducción</h2>
+                                <p>En un popular truco un mago le pide a un espectador que elija una carta de un mazo y,
+                                    luego de unas pasadas en las que exhibe las cartas en un tablero, 'adivina' la carta
+                                    elegida por el espectador.</p>
+                                <p>El procedimiento consiste en:&nbsp;<br></p>
+                                <ul>
+
+                                    <li>el mago le pide al espectador que elija una carta de un mazo,<br></li>
+
+                                    <li>mientras no haya adivinado cuál es la carta elegida, el mago repite el siguiente
+                                        procedimiento: pone las cartas en el tablero, le pregunta al espectador en qué
+                                        columna está la carta elegida y levanta las cartas del tablero.<br></li>
+                                </ul>Veamos un ejemplo para las cartas siguientes, en donde <i>J</i> representa el
+                                comodín y las letras <i>B</i>, <i>C</i>, <i>E</i>&nbsp; y <i>O</i> representan los palos
+                                bastos, copas, espadas y oros, respectivamente:<br>
+                                <p></p>
+                                <pre>1E J 2O  3C 2C 2E  1C 1O 12C  9O 5C 3B  8B 4E 7E  8O 3E 11O  10B 6C<br></pre>
+                                <p>El mago le pide al espectador que elija una carta, que suponemos que es el 2 de
+                                    copas, [ 2 C].<br></p>
+                                <p>Dispone las cartas, en este ejemplo, en tres columnas. Pone las cartas fila por fila,
+                                    de arriba hacia abajo y de izquierda a derecha (se debe notar que la última fila
+                                    puede no quedar completa): <br></p>
+                                <pre>[ 1 E ][  J  ][ 2 O ]<br>[ 3 C ][ 2 C ][ 2 E ]<br>[ 1 C ][ 1 O ][12 C ]<br>[ 9 O ][ 5 C ][ 3 B ]<br>[ 8 B ][ 4 E ][ 7 E ]<br>[ 8 O ][ 3 E ][11 O ]<br>[10 B ][ 6 C ][     ]<br><br></pre>
+                                <p><br></p>
+                                <p>El mago le pide al espectador que le diga en qué columna está la carta elegida. La
+                                    respuesta es que está en la columna 2.</p>
+                                <p>Ahora levanta las cartas columna por columna, de izquierda a derecha y cada columna
+                                    desde arriba hacia abajo. El resultado es:&nbsp;&nbsp;<br></p>
+                                <p><br></p>
+                                <p></p>
+                                <p></p>
+                                <pre> 1E 3C 1C 9O 8B 8O 10B J 2C 1O 5C 4E 3E 6C 2O 2E 12C 3B 7E 11O<br></pre>
+                                <p></p>
+                                <p>Luego vuelve a poner las cartas en el tablero fila por fila:<br></p>
+                                <p></p>
+                                <pre>[ 1 E ][ 3 C ][ 1 C ]<br>[ 9 O ][ 8 B ][ 8 O ]<br>[10 B ][  J  ][ 2 C ]<br>[ 1 O ][ 5 C ][ 4 E ]<br>[ 3 E ][ 6 C ][ 2 O ]<br>[ 2 E ][12 C ][ 3 B ]<br>[ 7 E ][11 O ][     ]<br><br></pre>
+                                <p>Ahora el espectador informa que la carta está en la columna 3.<br></p>
+                                <p></p>
+                                <p>Tras la siguiente iteración el tablero queda:</p>
+                                <p></p>
+                                <pre>[ 1 E ][ 9 O ][10 B ]<br>[ 1 O ][ 3 E ][ 2 E ]<br>[ 7 E ][ 3 C ][ 8 B ]<br>[  J  ][ 5 C ][ 6 C ]<br>[12 C ][11 O ][ 1 C ]<br>[ 8 O ][ 2 C ][ 4 E ]<br>[ 2 O ][ 3 B ][     ]<br><br></pre>
+                                <p>Luego de que el espectador dice que la carta está en la columna 2 el mago adivina que
+                                    la carta es el 2 de copas.</p>Una manera de ver este proceso es mediante
+                                intersección de conjuntos. Inicialmente el conjunto de cartas candidatas a ser la
+                                elegida consiste en todas las cartas. En cada pasada ese conjunto pasa a ser el
+                                resultado de su intersección con las
+                                cartas de la columna elegida. El proceso continúa hasta que el conjunto tenga solo un
+                                elemento. En el ejemplo inicialmente el conjunto de cartas en el que puede estar la
+                                elegida es todo el mazo. Tras la primera pasada ese conjunto pasa a ser&nbsp;
+                                {J, 2C, 1O, 5C, 4E, 3E, 6C}. La intersección de este conjunto con la tercera columna de
+                                la segunda pasada es {2C, 4E}. Y finalmente la intersección de este último con la
+                                segunda columna de la tercera pasada es {2C}.&nbsp; <br>
+                                <p style="text-align: left;">Este último será el enfoque con que se realiza la tarea.
+                                    Esta consiste en la implementación de una serie de subprogramas necesarios para el
+                                    funcionamiento del programa principal.<br></p>
+                                <div>
+                                    <p></p>
+                                    <h2>Constantes y Tipos de datos</h2>
+                                    <p>Se definen las siguientes constantes para representar el tablero:</p>
+                                    <p></p>
+                                    <div>
+                                        <div>
+                                            <p></p>
+                                            <p></p>
+                                            <div>
+                                                <div>
+                                                    <pre>  COLS = ; {algún entero mayor que 1}<br>  FILAS = ; {algún entero mayor que 0}<br><br> &nbsp;N =  COLS * FILAS;<br></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <p></p>
+                                    <p>Se definen a continuación los tipos de datos que se utilizan en la tarea.</p>
+                                    <p></p><b>Carta</b><br>
+                                </div>
+                                <div>
+                                    <div>
+
+
+
+                                        <p></p>
+                                        <p>Una carta es un comodín o tiene dos campos, <i>número</i> y <i>palo</i>. <br>
+                                        </p>
+                                        <div>
+                                            <div>
+                                                <pre>  TNumero = 1 .. N div 4;<br>  TPalo = (bastos, copas, espadas, oros);<br>  TCarta = record <br>    case comodin: boolean of<br>      false : (numero: TNumero; palo: TPalo);<br>      true : ()<br>  end;<br></pre>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p><b></b></p>
+                                        </div><b>Columna, Tablero y Mazo</b><br>
+                                        <p></p>
+                                        <p>El tablero es un arreglo con tope de columnas. A su vez, la columna es un
+                                            arreglo con tope de cartas.</p>
+                                        <p>El mazo también es un arreglo con tope de cartas pero de una dimensión
+                                            mayor.<br></p>
+                                        <p><br></p>
+                                        <p></p>
+                                        <div>
+                                            <div>
+                                                <pre>  TColumna = record<br>    tope: 0 .. FILAS;<br>    cartas: array [1 .. FILAS] of TCarta<br>  end;  <br>  TTablero = record<br>    tope : 0 .. COLS;<br>    columnas : array [1 .. COLS] of TColumna  <br>  end;<br><br>  TMazo = record<br>    tope: 0 .. N;<br>    cartas: array [1..N] of TCarta<br>  end;<br><br>  TRangoCols = 1 .. COLS;<br></pre>
+                                            </div>
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div><b></b></div>
+                                <p><b>Columna y Tablero en la versión listas</b><br></p>
+                                <p>En una versión alternativa la columna se representa con una lista de nodos enlazados.
+                                    Los nodos tienen un campo para una carta y otro campo para un puntero al siguiente
+                                    nodo.</p>
+                                <p>La representación del tablero se adapta. Sigue siendo un arreglo con tope pero de
+                                    estas columnas implementadas con listas. <br></p>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <pre>  TColumnaL = ^ncartas;<br>  ncartas = record<br>    carta : TCarta;<br>    sig : TColumnaL<br>  end;<br>  TTableroL = record<br>    tope : 0 .. COLS;<br>    columnas : array [1 .. COLS] of TColumnaL  <br>  end;<br><br></pre>
+                                        </div>
+                                    </div>
+                                    <h2>Subprogramas</h2>
+
+                                    <p>En esta sección se describen los subprogramas que el estudiante deberá
+                                        implementar para dar solución a la tarea.</p>
+                                    <p><br></p>
+                                    <p><b></b></p>
+
+                                    <p><b><b>SonCartasIguales</b><br></b>
+                                    </p><b>
+
+                                        <pre><code>function sonCartasIguales (a, b : TCarta) : boolean;
+</code></pre>
+
+                                    </b>
+                                    <p>El resultado es <i>true</i> si y solo si <i>a</i> y <i>b</i> son la misma carta.
+                                    </p>
+                                    <p></p>
+                                    <p><b><br></b></p>
+
+                                    <p><b>ArmarTablero</b><br></p>
+                                    <pre><code><b>procedure armarTablero (mazo: TMazo; cantCols: TRangoCols; var t : TTablero);</b>
+</code></pre>
+                                    <p>Copia en las primeras <i>cantCols</i> columnas del tablero <i>t</i> las cartas de
+                                        <i>mazo</i>.</p>
+                                    <p><span dir="auto">Las cartas en t deben quedar de tal manera que, si se recorre t
+                                            en orden creciente de filas y cada fila en orden creciente de columnas, se
+                                            encuentran las mismas cartas y en el mismo orden que en una recorrida de
+                                            mazo en orden creciente de sus posiciones.</span><br></p>
+
+                                    Se puede asumir que la cantidad de cartas de <i>m</i>azo caben
+                                    en esas columnas de <i>t</i>.<br>
+                                    <p><b><br></b></p>
+                                    <p>Por ejemplo, si las cartas de <i>mazo</i> son (4O, 1B, 5B, 3E, 9C) y
+                                        <i>cantCols</i> es 3 entonces el tope de <i>t</i> va a ser 3 y sus columnas van
+                                        a ser<br></p>
+                                    <p><b></b></p>
+                                    <pre>[ 4 O ][ 1 B ][ 5 B ]<br>[ 3 E ][ 9 C ][     ]</pre><b><br></b>
+                                    <p></p>
+                                    <p><b></b></p>
+
+                                    <p><b><b>Levantar</b>Tablero<br></b>
+                                    </p><b>
+
+                                        <pre><code>procedure levantarTablero (t : TTablero; var mazo : TMazo);
+</code></pre>
+
+                                    </b><b>
+                                        <p><span style="font-weight: normal;">Copia las cartas del tablero <i>t</i> en
+                                                <i>mazo</i>. <br></span></p>
+                                        <p><span style="font-weight: normal;">Las cartas en <i>mazo</i> deben quedar de
+                                                tal manera que si se recorre <i>t</i>
+                                                en orden creciente de columnas y cada columna en orden creciente de sus
+                                                posiciones
+                                                se encuentran las mismas cartas y en el mismo orden que en una recorrida
+                                                de <i>mazo</i> en orden creciente de sus posiciones.</span></p>
+                                    </b>La copia se hace en orden creciente de columnas y cada columna en orden
+                                    creciente de filas.<br>
+                                    <p></p>
+                                    <p>Por ejemplo, si el tope de <i>t</i> es 3 y sus columnas son<br></p>
+                                    <pre>[ 4 O ][ 1 B ][ 5 B ]<br>[ 3 E ][ 9 C ][     ]</pre>entonces las cartas de
+                                    <i>mazo</i> van a ser (4O, 3E, 1B, 9C, 5B).<b><b><br></b>
+                                        <p></p>
+                                        <p><b></b></p>
+                                        <p><b><b></b></b>
+                                        </p>
+                                    </b>
+                                    <p></p>
+                                    <p><b><br></b></p>
+
+                                    <p><b>EnQueColumna</b><br></p>
+
+                                    <pre><code><b>function enQueColumna (carta : TCarta; t: Ttablero): TRangoCols;</b>
+</code></pre>
+
+                                    <p>Determina en qué columna del tablero <i>t</i> está <i>c</i><i>arta</i>. <br></p>
+                                    <p>Se puede asumir que <i>carta</i> está en el tablero <i>t</i>.</p>
+                                    <p>Se puede asumir que en <i>t</i> no hay cartas repetidas.<br></p>
+                                    <p></p>
+                                    <p>Por ejemplo, si el tope de <i>t</i> es 3 y sus columnas son<br></p>
+                                    <pre>[ 4 O ][ 1 B ][ 5 B ]<br>[ 3 E ][ 9 C ][     ]</pre>entonces <br>
+                                    <p></p>
+                                    <ul>
+                                        <li>si carta es 3E el resultado debe ser 1.</li>
+                                        <li>si carta es 5B el resultado debe ser 3<b><b><b><b>.</b></b><br></b>
+                                            </b>
+                                        </li>
+                                    </ul><b><br></b>
+                                </div>
+
+                                <b>EstanEnAmbos</b><br>
+                                <pre><b><code>procedure estanEnAmbos (columna : TColumna; var mazo : TMazo);</code></b></pre>
+                                <p>Deja en <i>mazo</i> solo las cartas que también están en <i>columna</i>.<br></p>
+                                <p>Las cartas quedan en el mismo orden relativo en que estaban en <i>mazo</i>.<br></p>
+                                <p>Por ejemplo:</p>
+                                <ul>
+                                    <li>Si las cartas de <i>columna</i> son (1B, 2C, 3E) y las de <i>mazo</i> son (4O,
+                                        1B, 5B, 3E, 9C) entonces en <i>mazo</i> quedan (1B, 3E). <br></li>
+                                </ul>
+                                <ul>
+                                    <li>Si las cartas de <i>columna</i> son (1B, 2C, 3E) y las de <i>mazo</i> son (4O,
+                                        3E, 1B, 9C, 5B) entonces en <i>mazo</i> quedan (3E, 1B). <br></li>
+                                </ul>
+                                <ul>
+                                    <li>Si las cartas de <i>columna</i> son (1B, 2C, 3E) y las de <i>mazo</i> son (4O,
+                                        3C, 5B, 1O, 9C) entonces <i>mazo</i> queda vacío.<br></li>
+                                </ul><br>
+
+                                <b>ConvertirTablero</b><br>
+                                <div>
+                                    <pre><b><code>procedure convertirTablero (t : TTablero; var tl : TTableroL);</code></b></pre>
+                                </div>
+                                <p> Convierte el tablero <i>t</i>, implementado con arreglos con tope, en el tablero
+                                    <i>tl,</i> que está implementado con listas.<br></p>
+                                <p> A la columna <i>i</i>-ésima de <i>t</i> le corresponde la columna <i>i</i>-ésima de
+                                    <i>tl</i>.<br></p>
+                                <p> En la recorrida de una columna del tablero <i>tl</i> desde el inicio hasta el final
+                                    se deben encontrar las mismas cartas en el mismo orden que en la recorrida de la
+                                    columna correspondiente del tablero <i>t</i> desde la primera fila hasta la última.
+                                    <br></p>
+                                <p> Por ejemplo, si el tope de <i>t</i> es 3 y sus columnas son<br></p>
+                                <pre>[ 4 O ][ 1 B ][ 5 B ]<br>[ 3 E ][ 9 C ][     ]</pre> entonces <i>tl.tope</i> es 3 y
+                                sus columnas son, desde la primera hasta la tercera y representando cada una de
+                                izquierda a derecha:
+                                <pre> [ 4 O ] → [ 3 E ]<br><br> [ 1 B ] → [ 9 C ]<br><br> [ 5 B ] </pre>
+
+
+
+
+
+                                <div>
+                                    <h2>Se pide</h2>
+
+                                    <p>Escribir un archivo con todos los subprogramas solicitados. Los encabezados de
+                                        los subprogramas <strong>deben coincidir exactamente</strong> con los que
+                                        aparecen en esta letra. Si el estudiante realiza algún cambio se considerará que
+                                        el subprograma
+                                        no fue implementado. Si el estudiante lo desea, puede implementar subprogramas
+                                        auxiliares adicionales (además de los subprogramas pedidos).<br></p>
+
+
+
+                                    <p>Para la corrección, las tareas se compilarán con la versión <strong>3.0.4 para
+                                            Linux</strong>. La compilación y la ejecución se realizarán en línea de
+                                        comandos. El comando de compilación se invocará de la siguiente manera:</p>
+
+                                    <pre><code>fpc -Co -Cr -Miso -gl principal2.pas
+</code></pre>
+
+                                    <p><code>principal2.pas</code> será el programa principal entregado por el equipo
+                                        docente.</p>
+
+                                    <p><strong>NO</strong> se debe compilar con el IDE de Free Pascal.</p>
+
+                                    <p>No está permitido utilizar facilidades de Free Pascal que no forman parte del
+                                        estándar y no se dan en el curso. Así por ejemplo, no se puede utilizar ninguna
+                                        de las palabras siguientes: <code>uses</code>, <code>crlscr</code>,
+                                        <code>gotoxy</code>,
+                                        <code>crt</code>, <code>readkey</code>,
+                                        <code>longint</code>,<code>string</code>,<code>break</code>, etcétera.
+                                    </p>
+
+                                    <p>En esta tarea, como en todos los problemas de este curso, se valorará, además de
+                                        la lógica correcta, la utilización de un buen estilo de programación de acuerdo
+                                        a los criterios impartidos en el curso. De esta manera, se hará énfasis en
+                                        buenas prácticas
+                                        de programación que lleven a un código legible, bien documentado y mantenible,
+                                        tales como:</p>
+
+                                    <ul>
+                                        <li>indentación adecuada</li>
+                                        <li>utilización correcta y apropiada de las estructuras de control</li>
+                                        <li>código claro y legible</li>
+                                        <li>algoritmos razonablemente eficientes</li>
+                                        <li>utilización de comentarios que documenten y complementen el código</li>
+                                        <li>utilización de constantes simbólicas</li>
+                                        <li>nombres mnemotécnicos para variables, constantes, etcétera.</li>
+                                    </ul>Para resolver la tarea se pueden utilizar todos los conocimientos vistos en el
+                                    curso.
+                                </div>
+                                <div><br></div>
+                                <div>
+                                    <h2>Anexo</h2>
+                                </div>
+                                <div>
+                                    <p>La razón por la cual se puede
+                                        determinar la carta elegida es consecuencia del orden diferente en que
+                                        se levantan las cartas, por columnas, y se las vuelve a poner, por
+                                        filas. En el ejemplo, la carta elegida estaba en la posición 9 según el
+                                        orden en el
+                                        que se levantan, o sea, por columnas. Esta posición corresponde a la
+                                        segunda columna, la cual contiene las cartas que están en las
+                                        posiciones 8 a 14. En el siguiente diagrama se muestra la posición del
+                                        mazo en que va a quedar cada carta.<br></p>
+                                    <p><br></p>
+                                    <table width="80">
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td bgcolor="#00ff00"> 8</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td bgcolor="#00ff00">9</td>
+                                                <td>16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td bgcolor="#00ff00">10</td>
+                                                <td>17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td bgcolor="#00ff00"> 11 </td>
+                                                <td>18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td bgcolor="#00ff00">12</td>
+                                                <td>19</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6<br></td>
+                                                <td bgcolor="#00ff00">13</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7<br></td>
+                                                <td bgcolor="#00ff00">14</td>
+                                                <td>21</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><br>
+
+                                    </p>
+                                    <p>Como al volver a ponerlas en el
+                                        tablero el orden que se sigue es por filas, las cartas que estaban en
+                                        cada columna quedan distribuidas en varias columnas ocupando en
+                                        cualquiera de ellas a lo sumo 3 posiciones. La forma de saber en qué
+                                        posiciones de cada
+                                        columna puede estar la carta es mediante un cálculo aritmético o
+                                        simplemente contando al poner las cartas en el tablero. En este caso las
+                                        cartas que estaban desde la posición 8 hasta la 14 van a quedar desde
+                                        la segunda columna de la segunda fila hasta
+                                        la segunda columna de la cuarta fila. Cuando se informa que la carta
+                                        está en la tercera columna se sabe que la carta elegida está en la
+                                        tercera o cuarta fila de esa columna.</p>
+                                    <p><br></p>
+                                    <table ;="" width="80">
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>6</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td bgcolor="#00ff00">8</td>
+                                                <td bgcolor="#88ff00">9</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#00ff00">10</td>
+                                                <td bgcolor="#00ff00">11</td>
+                                                <td bgcolor="#88ff00">12</td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#00ff00">13</td>
+                                                <td bgcolor="#00ff00">14</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p><br></p>
+                                    <p><span dir="auto">Como se puede ver en el primero de los diagramas de este anexo,
+                                            al levantar el tablero las cartas que están en la tercera y cuarta fila de
+                                            la tercera columna van a quedar en las posiciones 17 y 18 del
+                                            mazo</span>.<br></p>
+                                    <p>En la siguiente pasada, otra vez
+                                        mediante aritmética o por conteo se sabe que esas dos cartas van a
+                                        quedar en las columnas segunda y tercera de la sexta fila por lo que al
+                                        indicar que la carta está en la&nbsp; columna 2 queda determinada la carta
+                                        porque
+                                        necesariamente es la que está en la sexta fila de esa columna.. <br></p>
+                                    <table ;="" width="80">
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>4</td>
+                                                <td>7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>13</td>
+                                                <td>16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>2</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>11</td>
+                                                <td>14</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td>20</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td bgcolor="#ffff00">9</td>
+                                                <td bgcolor="#88ff00">12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>18</td>
+                                                <td>21</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+                                    <p><br></p>
+                                    <p>En general si el tablero consiste en <i>C</i> columnas y en una de las pasadas la
+                                        cantidad de cartas candidatas es <i>d</i>, en la siguiente pasada esa cantidad
+                                        será <i>d div C</i>&nbsp; o <i>1+ d div C</i>. Esto permite asegurar que la
+                                        carta se encuentra
+                                        en una cantidad finita de pasadas. &nbsp; <br></p>
+                                    <p><br></p><br>
+                                </div>
+                                <div><br></div>
+                                <div><br></div>
+                            </div>
+                        </div>
+                        <div class="modified">Última modificación: jueves, 12 de noviembre de 2020, 15:42</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <footer id="page-footer">
+            <div id="course-footer"></div>
+
+            <div class="container">
+                <div class="row-fluid">
+                </div>
+            </div>
+
+
+            <div class="info container2 clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div>
+                            <p style="text-align: center">Por consultas sobre los cursos, dirigirse a los docentes o al
+                                instituto respectivo. Por consultas sobre el uso del sitio, contactarse con
+                                moodle@fing.edu.uy</p>
+                        </div>
+                        <!--div class="span6 helplink">
+                                    </div>
+                <div class="span3">
+                    <div class="tool_dataprivacy"><a href="https://eva.fing.edu.uy/admin/tool/dataprivacy/summary.php">Resumen de retención de datos</a></div><a href="https://download.moodle.org/mobile?version=2018120308&amp;lang=es&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Descargar la app para dispositivos móviles</a>                </div-->
+                    </div>
+
+
+                    <div class="row-fluid">
+                        <div align="center">
+                            <a href="http://proeva.edu.uy" target="_blank">
+                                <!-- <img src="http://164.73.2.138/permalinks/eva/logo_pie_proeva.svg" width="150"> -->
+                                <img src="https://www.fing.edu.uy/images/eva/logo_pie_proeva.svg" width="150">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </footer>
+        <a class="back-to-top" href="view.php@id=119194.html#top"><i class="fa fa-angle-up "></i></a>
+        <script type="text/javascript">
+            //<![CDATA[
+            var require = {
+                baseUrl: 'https://eva.fing.edu.uy/lib/requirejs.php/1588808938/',
+                // We only support AMD modules with an explicit define() statement.
+                enforceDefine: true,
+                skipDataMain: true,
+                waitSeconds: 0,
+
+                paths: {
+                    jquery: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/jquery-3.2.1.min',
+                    jqueryui: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/ui-1.12.1/jquery-ui.min',
+                    jqueryprivate: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/requirejs/jquery-private'
+                },
+
+                // Custom jquery config map.
+                map: {
+                    // '*' means all modules will get 'jqueryprivate'
+                    // for their 'jquery' dependency.
+                    '*': { jquery: 'jqueryprivate' },
+                    // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+                    '*': { process: 'core/first' },
+
+                    // 'jquery-private' wants the real jQuery module
+                    // though. If this line was not here, there would
+                    // be an unresolvable cyclic dependency.
+                    jqueryprivate: { jquery: 'jquery' }
+                }
+            };
+
+//]]>
+        </script>
+        <script type="text/javascript"
+            src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/requirejs/require.min.js"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            M.util.js_pending("core/first"); require(['core/first'], function () {
+                ;
+                require(["media_videojs/loader"], function (loader) {
+                    loader.setUp(function (videojs) {
+                        videojs.options.flash.swf = "https://eva.fing.edu.uy/media/player/videojs/videojs/video-js.swf";
+                        videojs.addLanguage("es", {
+                            "Play": "Reproducción",
+                            "Play Video": "Reproducción Vídeo",
+                            "Pause": "Pausa",
+                            "Current Time": "Tiempo reproducido",
+                            "Duration Time": "Duración total",
+                            "Remaining Time": "Tiempo restante",
+                            "Stream Type": "Tipo de secuencia",
+                            "LIVE": "DIRECTO",
+                            "Loaded": "Cargado",
+                            "Progress": "Progreso",
+                            "Fullscreen": "Pantalla completa",
+                            "Non-Fullscreen": "Pantalla no completa",
+                            "Mute": "Silenciar",
+                            "Unmute": "No silenciado",
+                            "Playback Rate": "Velocidad de reproducción",
+                            "Subtitles": "Subtítulos",
+                            "subtitles off": "Subtítulos desactivados",
+                            "Captions": "Subtítulos especiales",
+                            "captions off": "Subtítulos especiales desactivados",
+                            "Chapters": "Capítulos",
+                            "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+                            "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+                            "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+                            "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+                            "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+                        });
+
+                    });
+                });;
+                M.util.js_pending('block_settings/settingsblock');
+                require(['block_settings/settingsblock'], function (amd) {
+                    amd.init("16043", null);
+                    M.util.js_complete('block_settings/settingsblock');
+                });;
+                M.util.js_pending('block_navigation/navblock');
+                require(['block_navigation/navblock'], function (amd) {
+                    amd.init("16042");
+                    M.util.js_complete('block_navigation/navblock');
+                });;
+
+                require(['core/yui'], function (Y) {
+                    M.util.init_skiplink(Y);
+                });
+                ;
+                M.util.js_pending('core/log');
+                require(['core/log'], function (amd) {
+                    amd.setConfig({ "level": "warn" });
+                    M.util.js_complete('core/log');
+                });;
+                M.util.js_pending('core/page_global');
+                require(['core/page_global'], function (amd) {
+                    amd.init();
+                    M.util.js_complete('core/page_global');
+                }); M.util.js_complete("core/first");
+            });
+//]]>
+        </script>
+        <script type="text/javascript"
+            src="https://eva.fing.edu.uy/theme/javascript.php/bcu/1604512169/footer"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            M.str = { "moodle": { "lastmodified": "\u00daltima modificaci\u00f3n", "name": "Nombre", "error": "Error", "info": "Informaci\u00f3n", "yes": "S\u00ed", "no": "No", "ok": "OK", "viewallcourses": "Ver todos los cursos", "cancel": "Cancelar", "confirm": "Confirmar", "areyousure": "\u00bfEst\u00e1 seguro?", "closebuttontitle": "Cerrar", "unknownerror": "Error desconocido" }, "repository": { "type": "Tipo", "size": "Tama\u00f1o", "invalidjson": "Cadena JSON no v\u00e1lida", "nofilesattached": "No se han adjuntado archivos", "filepicker": "Selector de archivos", "logout": "Salir", "nofilesavailable": "No hay archivos disponibles", "norepositoriesavailable": "Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.", "fileexistsdialogheader": "El archivo existe", "fileexistsdialog_editor": "Un archivo con el mismo nombre ya se ha adjuntado al texto que est\u00e1 editando.", "fileexistsdialog_filemanager": "Un archivo con ese nombre ya ha sido adjuntado", "renameto": "Cambiar el nombre a \"{$a}\"", "referencesexist": "Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen", "select": "Seleccionar" }, "admin": { "confirmdeletecomments": "Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?", "confirmation": "Confirmaci\u00f3n" }, "block": { "addtodock": "Minimizar en la barra lateral", "undockitem": "Desacoplar este \u00edtem", "dockblock": "Acoplar bloque {$a}", "undockblock": "Desacoplar bloque {$a}", "undockall": "Desacoplar todo", "hidedockpanel": "Esconder el panel desacoplado", "hidepanel": "Esconder panel" }, "langconfig": { "thisdirectionvertical": "btt" } };
+//]]>
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            (function () {
+                Y.use("moodle-core-dock-loader", function () {
+                    M.core.dock.loader.initLoader();
+                });
+                Y.use("moodle-filter_mathjaxloader-loader", function () {
+                    M.filter_mathjaxloader.configure({ "mathjaxconfig": "MathJax.Hub.Config({\r\nconfig: [ \"Safe.js\",\"TeX-AMS_HTML-full.js\"],\r\n\/\/extensions: [\"TeX\/tex2jax\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: false,\r\ntex2jax: {\r\n    inlineMath: [['$$','$$'],['@#','#@'],['\\\\(','\\\\)']],\r\n    displayMath: [['\\\\@#','\\\\#@'],['\\\\[','\\\\]']],\r\n    preview: \"none\",\r\n    ignoreClass: \"editor_atto_content|forTexFilter\",\r\n    skipTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\",\"a\"],\r\n    processClass: \"tex2jax_process|markertext|drag\"\r\n  },      \r\n   TeX: {\r\n        extensions: [\"AMSmath.js\", \"AMSsymbols.js\"],\r\n        Macros: {\r\n          infer: [\"\\\\begin{array}\\[b\\]{c c c c}\"+\r\n          \"\\\\style{border-bottom:1px solid;}{\\\\begin{array}\\[b\\]{c c c c}\"+\r\n          \"#3 \\\\\\\\\"+\r\n          \"\\\\end{array}} &  \\\\hspace{-1em}\\\\raise{-0.5em}{#1} \\\\\\\\\"+\r\n          \"#2\"+\r\n          \"\\\\end{array}\",3,\"\"\r\n          ]\r\n        }\r\n }\r\n});\r\n", "lang": "es" });
+                });
+                Y.use("moodle-filter_glossary-autolinker", function () {
+                    M.filter_glossary.init_filter_autolinking({ "courseid": 0 });
+                });
+                Y.use("moodle-theme_bcu-zoom", function () {
+                    M.theme_bcu.zoom.init();
+                });
+                Y.use("moodle-theme_bcu-full", function () {
+                    M.theme_bcu.full.init();
+                });
+                M.util.help_popups.setup(Y);
+                M.util.init_block_hider(Y, { "id": "inst16042", "title": "Navegaci\u00f3n", "preference": "block16042hidden", "tooltipVisible": "Ocultar bloque Navegaci\u00f3n", "tooltipHidden": "Mostrar bloque Navegaci\u00f3n" });
+                M.util.js_pending('random5fb56e98d7de942'); Y.on('domready', function () { M.util.js_complete("init"); M.util.js_complete('random5fb56e98d7de942'); });
+            })();
+//]]>
+        </script>
+
+    </div>
+    <script type="text/javascript">
+        $("#id_submitbuttonusername").attr("onclick", "return fing_val_un()");
+        $("#id_submitbuttonemail").attr("onclick", "return fing_notice()");
+
+        dialog_text = "Si usted es estudiante debe cambiar su contraseña en https://www.fing.edu.uy/ens/miusuario.\nPresione Ok para ir a dicha página o Cancelar para continuar con el proceso actual."
+
+        function fing_notice() {
+            if (confirm(dialog_text)) {
+                window.onbeforeunload = null;
+                window.location.href = "https://www.fing.edu.uy/ens/miusuario";
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function fing_val_un() {
+            regex = /[a-z]+(\.[a-z]+)+/;
+            if (regex.exec($("#id_username")[0].value)) {
+                return fing_notice();
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

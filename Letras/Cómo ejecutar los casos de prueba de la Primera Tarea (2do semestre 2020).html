@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xml:lang="es" class="yui3-js-enabled">
+
+<head>
+    <title>P1: Cómo ejecutar los casos de prueba de la Primera Tarea (2do semestre 2020)</title>
+    <link rel="shortcut icon" href="https://eva.fing.edu.uy/theme/image.php/bcu/theme/1604512169/favicon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords"
+        content="moodle, P1: Cómo ejecutar los casos de prueba de la Primera Tarea (2do semestre 2020)">
+    <link rel="stylesheet" type="text/css"
+        href="https://eva.fing.edu.uy/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css">
+    <script type="text/javascript" async="" defer="" src="//www.fing.edu.uy/piwik/piwik.js"></script>
+    <script charset="utf-8" id="yui_3_17_2_1_1615472568305_8"
+        src="https://eva.fing.edu.uy/theme/yui_combo.php?m/1588808938/core/dock/dock-loader-min.js" async=""></script>
+    <script id="firstthemesheet"
+        type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css" href="https://eva.fing.edu.uy/theme/styles.php/bcu/1604512169_1/all">
+    <script type="text/javascript">
+        //<![CDATA[
+        var M = {}; M.yui = {};
+        M.pageloadstarttime = new Date();
+        M.cfg = { "wwwroot": "https:\/\/eva.fing.edu.uy", "sesskey": "mJLrrRbZBo", "themerev": "1604512169", "slasharguments": 1, "theme": "bcu", "iconsystemmodule": "core\/icon_system_standard", "jsrev": "1588808938", "admin": "admin", "svgicons": true, "usertimezone": "Am\u00e9rica\/Montevideo", "contextid": 311413 }; var yui1ConfigFn = function (me) { if (/-skin|reset|fonts|grids|base/.test(me.name)) { me.type = 'css'; me.path = me.path.replace(/\.js/, '.css'); me.path = me.path.replace(/\/yui2-skin/, '/assets/skins/sam/yui2-skin') } };
+        var yui2ConfigFn = function (me) {
+            var parts = me.name.replace(/^moodle-/, '').split('-'), component = parts.shift(), module = parts[0], min = '-min'; if (/-(skin|core)$/.test(me.name)) { parts.pop(); me.type = 'css'; min = '' }
+            if (module) { var filename = parts.join('-'); me.path = component + '/' + module + '/' + filename + min + '.' + me.type } else { me.path = component + '/' + component + '.' + me.type }
+        };
+        YUI_config = { "debug": false, "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/3.17.2\/", "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "combine": true, "filter": null, "insertBefore": "firstthemesheet", "groups": { "yui2": { "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/2in3\/2.9.0\/build\/", "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "combine": true, "ext": false, "root": "2in3\/2.9.0\/build\/", "patterns": { "yui2-": { "group": "yui2", "configFn": yui1ConfigFn } } }, "moodle": { "name": "moodle", "base": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?m\/1588808938\/", "combine": true, "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "ext": false, "root": "m\/1588808938\/", "patterns": { "moodle-": { "group": "moodle", "configFn": yui2ConfigFn } }, "filter": null, "modules": { "moodle-core-handlebars": { "condition": { "trigger": "handlebars", "when": "after" } }, "moodle-core-tooltip": { "requires": ["base", "node", "io-base", "moodle-core-notification-dialogue", "json-parse", "widget-position", "widget-position-align", "event-outside", "cache-base"] }, "moodle-core-maintenancemodetimer": { "requires": ["base", "node"] }, "moodle-core-chooserdialogue": { "requires": ["base", "panel", "moodle-core-notification"] }, "moodle-core-blocks": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification"] }, "moodle-core-dock": { "requires": ["base", "node", "event-custom", "event-mouseenter", "event-resize", "escape", "moodle-core-dock-loader", "moodle-core-event"] }, "moodle-core-dock-loader": { "requires": ["escape"] }, "moodle-core-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "event-key", "event-focus", "moodle-core-notification"] }, "moodle-core-languninstallconfirm": { "requires": ["base", "node", "moodle-core-notification-confirm", "moodle-core-notification-alert"] }, "moodle-core-notification": { "requires": ["moodle-core-notification-dialogue", "moodle-core-notification-alert", "moodle-core-notification-confirm", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-core-notification-dialogue": { "requires": ["base", "node", "panel", "escape", "event-key", "dd-plugin", "moodle-core-widget-focusafterclose", "moodle-core-lockscroll"] }, "moodle-core-notification-alert": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-confirm": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-exception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-ajaxexception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-actionmenu": { "requires": ["base", "event", "node-event-simulate"] }, "moodle-core-checknet": { "requires": ["base-base", "moodle-core-notification-alert", "io-base"] }, "moodle-core-lockscroll": { "requires": ["plugin", "base-build"] }, "moodle-core-popuphelp": { "requires": ["moodle-core-tooltip"] }, "moodle-core-formchangechecker": { "requires": ["base", "event-focus", "moodle-core-event"] }, "moodle-core-event": { "requires": ["event-custom"] }, "moodle-core_availability-form": { "requires": ["base", "node", "event", "event-delegate", "panel", "moodle-core-notification-dialogue", "json"] }, "moodle-backup-backupselectall": { "requires": ["node", "event", "node-event-simulate", "anim"] }, "moodle-backup-confirmcancel": { "requires": ["node", "node-event-simulate", "moodle-core-notification-confirm"] }, "moodle-course-formatchooser": { "requires": ["base", "node", "node-event-simulate"] }, "moodle-course-management": { "requires": ["base", "node", "io-base", "moodle-core-notification-exception", "json-parse", "dd-constrain", "dd-proxy", "dd-drop", "dd-delegate", "node-event-delegate"] }, "moodle-course-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-course-coursebase", "moodle-course-util"] }, "moodle-course-modchooser": { "requires": ["moodle-core-chooserdialogue", "moodle-course-coursebase"] }, "moodle-course-util": { "requires": ["node"], "use": ["moodle-course-util-base"], "submodules": { "moodle-course-util-base": {}, "moodle-course-util-section": { "requires": ["node", "moodle-course-util-base"] }, "moodle-course-util-cm": { "requires": ["node", "moodle-course-util-base"] } } }, "moodle-course-categoryexpander": { "requires": ["node", "event-key"] }, "moodle-form-dateselector": { "requires": ["base", "node", "overlay", "calendar"] }, "moodle-form-showadvanced": { "requires": ["node", "base", "selector-css3"] }, "moodle-form-passwordunmask": { "requires": [] }, "moodle-form-shortforms": { "requires": ["node", "base", "selector-css3", "moodle-core-event"] }, "moodle-question-chooser": { "requires": ["moodle-core-chooserdialogue"] }, "moodle-question-searchform": { "requires": ["base", "node"] }, "moodle-question-preview": { "requires": ["base", "dom", "event-delegate", "event-key", "core_question_engine"] }, "moodle-question-qbankmanager": { "requires": ["node", "selector-css3"] }, "moodle-availability_completion-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_date-form": { "requires": ["base", "node", "event", "io", "moodle-core_availability-form"] }, "moodle-availability_grade-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_group-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_grouping-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_profile-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-mod_assign-history": { "requires": ["node", "transition"] }, "moodle-mod_attendance-groupfilter": { "requires": ["base", "node"] }, "moodle-mod_forum-subscriptiontoggle": { "requires": ["base-base", "io-base"] }, "moodle-mod_quiz-modform": { "requires": ["base", "node", "event"] }, "moodle-mod_quiz-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-base", "moodle-mod_quiz-util-page", "moodle-mod_quiz-util-slot", "moodle-course-util"] }, "moodle-mod_quiz-questionchooser": { "requires": ["moodle-core-chooserdialogue", "moodle-mod_quiz-util", "querystring-parse"] }, "moodle-mod_quiz-repaginate": { "requires": ["base", "event", "node", "io", "moodle-core-notification-dialogue"] }, "moodle-mod_quiz-autosave": { "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"] }, "moodle-mod_quiz-util": { "requires": ["node", "moodle-core-actionmenu"], "use": ["moodle-mod_quiz-util-base"], "submodules": { "moodle-mod_quiz-util-base": {}, "moodle-mod_quiz-util-slot": { "requires": ["node", "moodle-mod_quiz-util-base"] }, "moodle-mod_quiz-util-page": { "requires": ["node", "moodle-mod_quiz-util-base"] } } }, "moodle-mod_quiz-toolboxes": { "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-slot", "moodle-core-notification-ajaxexception"] }, "moodle-mod_quiz-quizbase": { "requires": ["base", "node"] }, "moodle-mod_scheduler-saveseen": { "requires": ["base", "node", "event"] }, "moodle-mod_scheduler-studentlist": { "requires": ["base", "node", "event", "io"] }, "moodle-mod_scheduler-delselected": { "requires": ["base", "node", "event"] }, "moodle-message_airnotifier-toolboxes": { "requires": ["base", "node", "io"] }, "moodle-filter_glossary-autolinker": { "requires": ["base", "node", "io-base", "json-parse", "event-delegate", "overlay", "moodle-core-event", "moodle-core-notification-alert", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-filter_mathjaxloader-loader": { "requires": ["moodle-core-event"] }, "moodle-editor_atto-editor": { "requires": ["node", "transition", "io", "overlay", "escape", "event", "event-simulate", "event-custom", "node-event-html5", "node-event-simulate", "yui-throttle", "moodle-core-notification-dialogue", "moodle-core-notification-confirm", "moodle-editor_atto-rangy", "handlebars", "timers", "querystring-stringify"] }, "moodle-editor_atto-plugin": { "requires": ["node", "base", "escape", "event", "event-outside", "handlebars", "event-custom", "timers", "moodle-editor_atto-menu"] }, "moodle-editor_atto-menu": { "requires": ["moodle-core-notification-dialogue", "node", "event", "event-custom"] }, "moodle-editor_atto-rangy": { "requires": [] }, "moodle-format_grid-gridkeys": { "requires": ["event-nav-keys"] }, "moodle-report_eventlist-eventfilter": { "requires": ["base", "event", "node", "node-event-delegate", "datatable", "autocomplete", "autocomplete-filters"] }, "moodle-report_loglive-fetchlogs": { "requires": ["base", "event", "node", "io", "node-event-delegate"] }, "moodle-gradereport_grader-gradereporttable": { "requires": ["base", "node", "event", "handlebars", "overlay", "event-hover"] }, "moodle-gradereport_history-userselector": { "requires": ["escape", "event-delegate", "event-key", "handlebars", "io-base", "json-parse", "moodle-core-notification-dialogue"] }, "moodle-tool_capability-search": { "requires": ["base", "node"] }, "moodle-tool_lp-dragdrop-reorder": { "requires": ["moodle-core-dragdrop"] }, "moodle-tool_monitor-dropdown": { "requires": ["base", "event", "node"] }, "moodle-assignfeedback_editpdf-editor": { "requires": ["base", "event", "node", "io", "graphics", "json", "event-move", "event-resize", "transition", "querystring-stringify-simple", "moodle-core-notification-dialog", "moodle-core-notification-alert", "moodle-core-notification-warning", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-atto_accessibilitychecker-button": { "requires": ["color-base", "moodle-editor_atto-plugin"] }, "moodle-atto_accessibilityhelper-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_align-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_bold-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_charmap-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_clear-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_collapse-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_emoticon-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_equation-button": { "requires": ["moodle-editor_atto-plugin", "moodle-core-event", "io", "event-valuechange", "tabview", "array-extras"] }, "moodle-atto_html-codemirror": { "requires": ["moodle-atto_html-codemirror-skin"] }, "moodle-atto_html-beautify": {}, "moodle-atto_html-button": { "requires": ["promise", "moodle-editor_atto-plugin", "moodle-atto_html-beautify", "moodle-atto_html-codemirror", "event-valuechange"] }, "moodle-atto_htmlplus-codemirror": { "requires": ["moodle-atto_htmlplus-codemirror-skin"] }, "moodle-atto_htmlplus-beautify": {}, "moodle-atto_htmlplus-button": { "requires": ["moodle-editor_atto-plugin", "moodle-atto_htmlplus-beautify", "moodle-atto_htmlplus-codemirror", "event-valuechange"] }, "moodle-atto_image-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_indent-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_italic-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_link-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_managefiles-usedfiles": { "requires": ["node", "escape"] }, "moodle-atto_managefiles-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_media-button": { "requires": ["moodle-editor_atto-plugin", "moodle-form-shortforms"] }, "moodle-atto_noautolink-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_orderedlist-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_recordrtc-recording": { "requires": ["moodle-atto_recordrtc-button"] }, "moodle-atto_recordrtc-button": { "requires": ["moodle-editor_atto-plugin", "moodle-atto_recordrtc-recording"] }, "moodle-atto_rtl-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_strike-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_subscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_superscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_table-button": { "requires": ["moodle-editor_atto-plugin", "moodle-editor_atto-menu", "event", "event-valuechange"] }, "moodle-atto_title-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_underline-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_undo-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_unorderedlist-button": { "requires": ["moodle-editor_atto-plugin"] } } }, "gallery": { "name": "gallery", "base": "https:\/\/eva.fing.edu.uy\/lib\/yuilib\/gallery\/", "combine": true, "comboBase": "https:\/\/eva.fing.edu.uy\/theme\/yui_combo.php?", "ext": false, "root": "gallery\/1588808938\/", "patterns": { "gallery-": { "group": "gallery" } } } }, "modules": { "core_filepicker": { "name": "core_filepicker", "fullpath": "https:\/\/eva.fing.edu.uy\/lib\/javascript.php\/1588808938\/repository\/filepicker.js", "requires": ["base", "node", "node-event-simulate", "json", "async-queue", "io-base", "io-upload-iframe", "io-form", "yui2-treeview", "panel", "cookie", "datatable", "datatable-sort", "resize-plugin", "dd-plugin", "escape", "moodle-core_filepicker", "moodle-core-notification-dialogue"] }, "core_comment": { "name": "core_comment", "fullpath": "https:\/\/eva.fing.edu.uy\/lib\/javascript.php\/1588808938\/comment\/comment.js", "requires": ["base", "io-base", "node", "json", "yui2-animation", "overlay", "escape"] }, "mathjax": { "name": "mathjax", "fullpath": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured" } } };
+        M.yui.loader = { modules: {} };
+
+//]]>
+    </script>
+
+    <!-- Start Piwik Code -->
+    <noscript>
+        <p>
+            <img src="https://www.fing.edu.uy/piwik/piwik.php?idsite=5" style="border:0;" alt="" />
+        </p>
+    </noscript>
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['setDocumentTitle', 'Institutos/Computación/Programación 1/page/Cómo ejecutar los casos de prueba de la Primera Tarea (2do semestre 2020)']);
+
+        _paq.push(['setUserId', 1]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['enableHeartBeatTimer', 30]);
+        (function () {
+            var u = '//www.fing.edu.uy/piwik/';
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 5]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first"
+        src="https://eva.fing.edu.uy/lib/requirejs.php/1588808938/core/first.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery"
+        src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/jquery-3.2.1.min.js"></script>
+</head>
+
+<body id="page-mod-page-view"
+    class="format-topics  path-mod path-mod-page dir-ltr lang-es yui-skin-sam yui3-skin-sam eva-fing-edu-uy pagelayout-incourse course-58 context-311413 cmid-119188 category-7 two-column  has-region-side-post used-region-side-post side-post-only jsenabled">
+
+    <div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+    <script type="text/javascript" src="https://eva.fing.edu.uy/theme/jquery.php/core/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/jquery-flexslider-min.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/jquery-easing-min.js"></script>
+    <script type="text/javascript" src="https://eva.fing.edu.uy/theme/jquery.php/theme_bcu/custom2.js"></script>
+    <script type="text/javascript"
+        src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/javascript-static.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        document.body.className += ' jsenabled';
+//]]>
+    </script>
+
+    <div id="page" class="container-fluid ">
+
+
+
+
+        <div class="container outercont">
+            <div id="page-content" class="row-fluid">
+
+                <section id="region-main" class="span9   ">
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span>
+                        <h2>Cómo ejecutar los casos de prueba de la Primera Tarea (2do semestre 2020)</h2>
+                        <div class="box generalbox center clearfix">
+                            <div class="no-overflow">
+                                <p><b>Nota</b>:&nbsp; Este test debe ser ejecutado en linux.<br><br>En esta página se
+                                    describen varios archivos que sirven para probar la tarea; estos están comprimidos
+                                    en el archivo <b><i>pruebas.tar.gz</i></b> (se encuentra en la sección de
+                                    laboratorio del curso).<br><br>El contenido del archivo comprimido se debe extraer
+                                    en una carpeta cualquiera y en la misma se debe copiar el archivo <i>tarea.pas</i>
+                                    con los subprogramas solicitados en esta tarea.<br><br></p>
+                                <h4>Como descomprimir los archivos </h4>
+                                <p>El archivo se puede descomprimir con el siguiente comando: <b>tar xzf
+                                        pruebas.tar.gz</b><br>También funciona accionar con doble <i>click</i> sobre el
+                                    archivo.<br><br></p>
+                                <h4>Archivos proporcionados</h4>
+                                <p>En la carpeta donde se realizó la descompresión se van a encontrar los siguientes
+                                    archivos y carpetas:<br></p>
+                                <ul>
+                                    <li>El archivos <b><i>principal</i><i>.pas</i></b>.</li>
+                                    <li>Una carpeta&nbsp; <b>entradas/</b>,que contiene las entradas al programa
+                                        principal para realizar los casos de prueba. </li>
+                                    <li>Una carpeta&nbsp; <b><i>salidas/</i></b> con las salidas oficiales, o esperadas.
+                                    </li>
+                                    <li>Una carpeta&nbsp; <b><i>mios/</i></b> con las salidas que se obtienen al
+                                        ejecutar el programa.</li>
+                                    <li>Una carpeta&nbsp; <b><i>diffs/</i></b> con las resultados de comparar las
+                                        salidas oficiales y las salidas obtenidas</li>
+                                    <li>Un archivo (script) <b><i>test.sh</i></b> para compilar, ejecutar y comparar los
+                                        casos de prueba automáticamente.<br></li>
+                                </ul>
+                                <p><br></p>
+                                <p></p>
+                                <h4>Comportamiento del programa principal<br></h4>
+                                <p></p>
+                                <p>&nbsp;Para probar el programa compilamos el programa <b>principal.pas</b> (esto se
+                                    hace una sola vez mientras no se hagan cambios):</p>
+                                <p><b>&nbsp;&nbsp;&nbsp; $ fpc -Co -Cr -Miso -gl principal.pas</b><br></p>
+                                <p>y nos aseguramos que no hay errores de compilación y que se ha generado el ejecutable
+                                    llamado <b>principal</b>. <br><br><b>Se debe compilar en línea de comandos.</b> No
+                                    usar IDEs u otras herramientas similares.</p><br>
+                                <p></p>
+                                <p></p>
+                                <h4>Probando de manera interactiva</h4>
+                                <p>El programa se puede ejecutar de manera interactiva con el comando: <br></p>
+                                <p><b>&nbsp; &nbsp; $ ./principal</b></p>
+                                <p></p>En esta modalidad el programa queda esperando que el usuario ingrese un
+                                comando.<br>
+                                Hay un comando para cada subprograma, al cual invoca, y otro para terminar la
+                                ejecución.<br>
+                                Los comandos están formados por una letra que lo identifica y una lista de parámetros,
+                                posiblemente vacía. Los identificadores de comando son: <b>g</b>, <b>l</b>,
+                                <b>q</b>.<br>
+                                <p></p>
+                                <p>El comando <b>q</b> termina la ejecución del programa.<br></p>
+                                <p>En los demás los parámetros de cada comando corresponden a los del subprograma que
+                                    invoca.<br>
+                                    Descripción de los comandos:<br>
+                                    <br><b>g n</b><br>
+                                    Invoca <i>generadira (n)</i><br>
+                                    Imprime el resultado de esa invocación.<br>
+                                    <br><b>
+                                        l semilla limite</b><br>
+                                    Invoca <i>longitud (semilla limite)</i><br>
+                                    Imprime el resultado de esa invocación.<br>&nbsp;
+                                    <br>
+                                    <b>q</b><br>
+                                    Termina la ejecución<br>
+                                </p>
+                                <p><br></p>
+                                <h4>Probando un Caso de Prueba</h4>
+                                <p>Si queremos probar un caso de prueba particular, por ejemplo&nbsp; <i>01.txt</i>,
+                                    procedemos así:</p>
+                                <ul>
+                                    <li>Ejecutamos nuestro programa de la siguiente forma:</li>
+                                </ul>
+                                <p>&nbsp;&nbsp;&nbsp; <b>$ ./principal&nbsp; &lt; entradas/01.txt&nbsp; &gt;
+                                        mios/01.txt</b><br></p>
+                                <p>El comando anterior ejecuta el programa principal de manera tal que la entrada es
+                                    leída desde el archivo&nbsp; <i>entradas/01.txt</i> y la salida es guardada en el
+                                    archivo&nbsp; <i>mios/01.txt</i>.<br></p>
+                                <ul>
+                                    <li>&nbsp;Luego se verifica que la salida obtenida coincida con la salida esperada
+                                        ejecutando el comando <i>diff</i>:<br></li>
+                                </ul>
+                                <p><b>&nbsp;&nbsp;&nbsp; $ diff&nbsp; mios/01.txt&nbsp; salidas/01.txt &gt;
+                                        diffs/01.txt</b><br><br>Si el archivo <i>diffs/01.txt</i> no contiene nada,
+                                    significa que los archivos son iguales y que por lo tanto la salida es correcta. En
+                                    caso contrario, en ese archivo se muestran las líneas que son diferentes en ambas
+                                    salidas.<br></p>
+                                <p></p>
+                                <ul>
+                                    <li>&nbsp;De manera alternativa, en lugar de dirigir el resultado de la comparación
+                                        hacia un archivo se la puede mostrar por la salida estándar (el monitor):<br>
+                                    </li>
+                                </ul>
+                                <p><b>&nbsp;&nbsp;&nbsp; $ diff&nbsp; mios/01.txt&nbsp; salidas/01.txt</b><br>Si no hay
+                                    diferencias entre los archivos <b>mios/01.txt</b> y <b>salidas/01.txt</b> no se
+                                    muestra nada.&nbsp; <br></p><br>
+                                <p></p>
+                                <h4>Verificando todos los casos</h4>
+                                <p>Adjuntamos además un script de <b>bash</b> que permite ejecutar automáticamente todos
+                                    los casos y nos indica para cada test si es correcto o no. El test se ejecuta de la
+                                    siguiente manera en la terminal:<b> <br></b></p>
+                                <p><b>&nbsp;&nbsp;&nbsp; $ bash test.sh</b><br></p>
+                                <p>Este comando: compila el programa principal, ejecuta cada uno de los casos de prueba
+                                    de la carpeta&nbsp; <i>entradas/</i>, y compara cada resultado obtenido con la
+                                    salida oficial (o esperada).<br>Las salidas quedan en la carpeta <i>mios/</i> y las
+                                    comparaciones en la carpeta <i>diffs/</i>.<br>Además en la pantalla se indica el
+                                    resultado al ejecutar cada caso y al final se informa la cantidad de casos correctos
+                                    e incorrectos.<br><br></p>
+                                <h4>Descarga de Archivos</h4>
+                                <p>El archivo <i><b>pruebas.tar.gz</b></i> se puede descargar de la sección de
+                                    laboratorio del curso.<br></p>
+                                <p><br></p>
+                            </div>
+                        </div>
+                        <div class="modified">Última modificación: lunes, 21 de septiembre de 2020, 13:01</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <footer id="page-footer">
+            <div id="course-footer"></div>
+
+            <div class="container">
+                <div class="row-fluid">
+                </div>
+            </div>
+
+
+            <div class="info container2 clearfix">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div>
+                            <p style="text-align: center">Por consultas sobre los cursos, dirigirse a los docentes o al
+                                instituto respectivo. Por consultas sobre el uso del sitio, contactarse con
+                                moodle@fing.edu.uy</p>
+                        </div>
+                        <!--div class="span6 helplink">
+                                    </div>
+                <div class="span3">
+                    <div class="tool_dataprivacy"><a href="https://eva.fing.edu.uy/admin/tool/dataprivacy/summary.php">Resumen de retención de datos</a></div><a href="https://download.moodle.org/mobile?version=2018120308&amp;lang=es&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Descargar la app para dispositivos móviles</a>                </div-->
+                    </div>
+
+
+                    <div class="row-fluid">
+                        <div align="center">
+                            <a href="http://proeva.edu.uy" target="_blank">
+                                <!-- <img src="http://164.73.2.138/permalinks/eva/logo_pie_proeva.svg" width="150"> -->
+                                <img src="https://www.fing.edu.uy/images/eva/logo_pie_proeva.svg" width="150">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </footer>
+        <a class="back-to-top" href="view.php@id=119188.html#top"><i class="fa fa-angle-up "></i></a>
+        <script type="text/javascript">
+            //<![CDATA[
+            var require = {
+                baseUrl: 'https://eva.fing.edu.uy/lib/requirejs.php/1588808938/',
+                // We only support AMD modules with an explicit define() statement.
+                enforceDefine: true,
+                skipDataMain: true,
+                waitSeconds: 0,
+
+                paths: {
+                    jquery: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/jquery-3.2.1.min',
+                    jqueryui: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/jquery/ui-1.12.1/jquery-ui.min',
+                    jqueryprivate: 'https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/requirejs/jquery-private'
+                },
+
+                // Custom jquery config map.
+                map: {
+                    // '*' means all modules will get 'jqueryprivate'
+                    // for their 'jquery' dependency.
+                    '*': { jquery: 'jqueryprivate' },
+                    // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+                    '*': { process: 'core/first' },
+
+                    // 'jquery-private' wants the real jQuery module
+                    // though. If this line was not here, there would
+                    // be an unresolvable cyclic dependency.
+                    jqueryprivate: { jquery: 'jquery' }
+                }
+            };
+
+//]]>
+        </script>
+        <script type="text/javascript"
+            src="https://eva.fing.edu.uy/lib/javascript.php/1588808938/lib/requirejs/require.min.js"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            M.util.js_pending("core/first"); require(['core/first'], function () {
+                ;
+                require(["media_videojs/loader"], function (loader) {
+                    loader.setUp(function (videojs) {
+                        videojs.options.flash.swf = "https://eva.fing.edu.uy/media/player/videojs/videojs/video-js.swf";
+                        videojs.addLanguage("es", {
+                            "Play": "Reproducción",
+                            "Play Video": "Reproducción Vídeo",
+                            "Pause": "Pausa",
+                            "Current Time": "Tiempo reproducido",
+                            "Duration Time": "Duración total",
+                            "Remaining Time": "Tiempo restante",
+                            "Stream Type": "Tipo de secuencia",
+                            "LIVE": "DIRECTO",
+                            "Loaded": "Cargado",
+                            "Progress": "Progreso",
+                            "Fullscreen": "Pantalla completa",
+                            "Non-Fullscreen": "Pantalla no completa",
+                            "Mute": "Silenciar",
+                            "Unmute": "No silenciado",
+                            "Playback Rate": "Velocidad de reproducción",
+                            "Subtitles": "Subtítulos",
+                            "subtitles off": "Subtítulos desactivados",
+                            "Captions": "Subtítulos especiales",
+                            "captions off": "Subtítulos especiales desactivados",
+                            "Chapters": "Capítulos",
+                            "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+                            "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+                            "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+                            "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+                            "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+                        });
+
+                    });
+                });;
+                M.util.js_pending('block_settings/settingsblock');
+                require(['block_settings/settingsblock'], function (amd) {
+                    amd.init("16043", null);
+                    M.util.js_complete('block_settings/settingsblock');
+                });;
+                M.util.js_pending('block_navigation/navblock');
+                require(['block_navigation/navblock'], function (amd) {
+                    amd.init("16042");
+                    M.util.js_complete('block_navigation/navblock');
+                });;
+
+                require(['core/yui'], function (Y) {
+                    M.util.init_skiplink(Y);
+                });
+                ;
+                M.util.js_pending('core/log');
+                require(['core/log'], function (amd) {
+                    amd.setConfig({ "level": "warn" });
+                    M.util.js_complete('core/log');
+                });;
+                M.util.js_pending('core/page_global');
+                require(['core/page_global'], function (amd) {
+                    amd.init();
+                    M.util.js_complete('core/page_global');
+                }); M.util.js_complete("core/first");
+            });
+//]]>
+        </script>
+        <script type="text/javascript"
+            src="https://eva.fing.edu.uy/theme/javascript.php/bcu/1604512169/footer"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            M.str = { "moodle": { "lastmodified": "\u00daltima modificaci\u00f3n", "name": "Nombre", "error": "Error", "info": "Informaci\u00f3n", "yes": "S\u00ed", "no": "No", "ok": "OK", "viewallcourses": "Ver todos los cursos", "cancel": "Cancelar", "confirm": "Confirmar", "areyousure": "\u00bfEst\u00e1 seguro?", "closebuttontitle": "Cerrar", "unknownerror": "Error desconocido" }, "repository": { "type": "Tipo", "size": "Tama\u00f1o", "invalidjson": "Cadena JSON no v\u00e1lida", "nofilesattached": "No se han adjuntado archivos", "filepicker": "Selector de archivos", "logout": "Salir", "nofilesavailable": "No hay archivos disponibles", "norepositoriesavailable": "Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.", "fileexistsdialogheader": "El archivo existe", "fileexistsdialog_editor": "Un archivo con el mismo nombre ya se ha adjuntado al texto que est\u00e1 editando.", "fileexistsdialog_filemanager": "Un archivo con ese nombre ya ha sido adjuntado", "renameto": "Cambiar el nombre a \"{$a}\"", "referencesexist": "Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen", "select": "Seleccionar" }, "admin": { "confirmdeletecomments": "Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?", "confirmation": "Confirmaci\u00f3n" }, "block": { "addtodock": "Minimizar en la barra lateral", "undockitem": "Desacoplar este \u00edtem", "dockblock": "Acoplar bloque {$a}", "undockblock": "Desacoplar bloque {$a}", "undockall": "Desacoplar todo", "hidedockpanel": "Esconder el panel desacoplado", "hidepanel": "Esconder panel" }, "langconfig": { "thisdirectionvertical": "btt" } };
+//]]>
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            (function () {
+                Y.use("moodle-core-dock-loader", function () {
+                    M.core.dock.loader.initLoader();
+                });
+                Y.use("moodle-filter_mathjaxloader-loader", function () {
+                    M.filter_mathjaxloader.configure({ "mathjaxconfig": "MathJax.Hub.Config({\r\nconfig: [ \"Safe.js\",\"TeX-AMS_HTML-full.js\"],\r\n\/\/extensions: [\"TeX\/tex2jax\"],\r\nerrorSettings: { message: [\"!\"] },\r\nskipStartupTypeset: false,\r\ntex2jax: {\r\n    inlineMath: [['$$','$$'],['@#','#@'],['\\\\(','\\\\)']],\r\n    displayMath: [['\\\\@#','\\\\#@'],['\\\\[','\\\\]']],\r\n    preview: \"none\",\r\n    ignoreClass: \"editor_atto_content|forTexFilter\",\r\n    skipTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\",\"a\"],\r\n    processClass: \"tex2jax_process|markertext|drag\"\r\n  },      \r\n   TeX: {\r\n        extensions: [\"AMSmath.js\", \"AMSsymbols.js\"],\r\n        Macros: {\r\n          infer: [\"\\\\begin{array}\\[b\\]{c c c c}\"+\r\n          \"\\\\style{border-bottom:1px solid;}{\\\\begin{array}\\[b\\]{c c c c}\"+\r\n          \"#3 \\\\\\\\\"+\r\n          \"\\\\end{array}} &  \\\\hspace{-1em}\\\\raise{-0.5em}{#1} \\\\\\\\\"+\r\n          \"#2\"+\r\n          \"\\\\end{array}\",3,\"\"\r\n          ]\r\n        }\r\n }\r\n});\r\n", "lang": "es" });
+                });
+                Y.use("moodle-filter_glossary-autolinker", function () {
+                    M.filter_glossary.init_filter_autolinking({ "courseid": 0 });
+                });
+                Y.use("moodle-theme_bcu-zoom", function () {
+                    M.theme_bcu.zoom.init();
+                });
+                Y.use("moodle-theme_bcu-full", function () {
+                    M.theme_bcu.full.init();
+                });
+                M.util.help_popups.setup(Y);
+                M.util.init_block_hider(Y, { "id": "inst16042", "title": "Navegaci\u00f3n", "preference": "block16042hidden", "tooltipVisible": "Ocultar bloque Navegaci\u00f3n", "tooltipHidden": "Mostrar bloque Navegaci\u00f3n" });
+                M.util.js_pending('random5fb56d839920842'); Y.on('domready', function () { M.util.js_complete("init"); M.util.js_complete('random5fb56d839920842'); });
+            })();
+//]]>
+        </script>
+
+    </div>
+    <script type="text/javascript">
+        $("#id_submitbuttonusername").attr("onclick", "return fing_val_un()");
+        $("#id_submitbuttonemail").attr("onclick", "return fing_notice()");
+
+        dialog_text = "Si usted es estudiante debe cambiar su contraseña en https://www.fing.edu.uy/ens/miusuario.\nPresione Ok para ir a dicha página o Cancelar para continuar con el proceso actual."
+
+        function fing_notice() {
+            if (confirm(dialog_text)) {
+                window.onbeforeunload = null;
+                window.location.href = "https://www.fing.edu.uy/ens/miusuario";
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function fing_val_un() {
+            regex = /[a-z]+(\.[a-z]+)+/;
+            if (regex.exec($("#id_username")[0].value)) {
+                return fing_notice();
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
