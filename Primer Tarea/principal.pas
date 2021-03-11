@@ -24,7 +24,7 @@ var
   limite : integer;  
 
 (****************************************)
-(* Programa Principal *)
+(* Programa Principal *) 
 (****************************************)
 
 begin
